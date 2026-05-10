@@ -1,4 +1,4 @@
-# China LLMs for Codex Responses Proxy
+# China LLM Codex Proxy Guide
 
 > 中文说明在前，English guide follows below.
 
@@ -71,8 +71,8 @@ Codex 侧可以把模型名写成 `gpt-5.2` 这样的别名，代理服务器再
 1. 克隆仓库：
 
 ```bash
-git clone https://github.com/liaoyl830/qwen-codex-responses-proxy-guide.git
-cd qwen-codex-responses-proxy-guide
+git clone https://github.com/liaoyl830/china-llm-codex-proxy-guide.git
+cd china-llm-codex-proxy-guide
 ```
 
 2. 复制配置：
@@ -303,8 +303,8 @@ The local desktop mode binds only to `127.0.0.1` by default, so it is not expose
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/liaoyl830/qwen-codex-responses-proxy-guide.git
-cd qwen-codex-responses-proxy-guide
+git clone https://github.com/liaoyl830/china-llm-codex-proxy-guide.git
+cd china-llm-codex-proxy-guide
 ```
 
 2. Copy the example files:

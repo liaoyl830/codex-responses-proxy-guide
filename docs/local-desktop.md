@@ -24,8 +24,8 @@ docker compose version
 ### 2. 下载并进入项目
 
 ```powershell
-git clone https://github.com/liaoyl830/qwen-codex-responses-proxy-guide.git
-cd qwen-codex-responses-proxy-guide
+git clone https://github.com/liaoyl830/china-llm-codex-proxy-guide.git
+cd china-llm-codex-proxy-guide
 ```
 
 如果没有 Git，也可以从 GitHub 下载 ZIP 后解压。
@@ -118,8 +118,8 @@ docker compose version
 ### 2. 下载并进入项目
 
 ```bash
-git clone https://github.com/liaoyl830/qwen-codex-responses-proxy-guide.git
-cd qwen-codex-responses-proxy-guide
+git clone https://github.com/liaoyl830/china-llm-codex-proxy-guide.git
+cd china-llm-codex-proxy-guide
 ```
 
 如果没有 Git，也可以从 GitHub 下载 ZIP 后解压。
@@ -255,8 +255,8 @@ docker compose version
 ### 2. Download and enter the project
 
 ```powershell
-git clone https://github.com/liaoyl830/qwen-codex-responses-proxy-guide.git
-cd qwen-codex-responses-proxy-guide
+git clone https://github.com/liaoyl830/china-llm-codex-proxy-guide.git
+cd china-llm-codex-proxy-guide
 ```
 
 If Git is not installed, download the ZIP from GitHub and extract it.
@@ -349,8 +349,8 @@ docker compose version
 ### 2. Download and enter the project
 
 ```bash
-git clone https://github.com/liaoyl830/qwen-codex-responses-proxy-guide.git
-cd qwen-codex-responses-proxy-guide
+git clone https://github.com/liaoyl830/china-llm-codex-proxy-guide.git
+cd china-llm-codex-proxy-guide
 ```
 
 If Git is not installed, download the ZIP from GitHub and extract it.

@@ -1,7 +1,7 @@
 services:
-  qwen-codex-proxy:
+  china-llm-codex-proxy:
     image: ghcr.io/yatesdr/go-llm-proxy:latest
-    container_name: qwen-codex-proxy-local
+    container_name: china-llm-codex-proxy-local
     restart: unless-stopped
     ports:
       - "127.0.0.1:3002:8080"
