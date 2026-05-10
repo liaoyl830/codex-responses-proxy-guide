@@ -1,8 +1,19 @@
-﻿# Codex Responses Proxy Guide
+<div align="center">
 
-> 中文说明在前，English guide follows below.
+# Codex Responses Proxy Guide
 
-## 中文说明
+Bridge OpenAI-compatible Chat Completions models into Codex through a Responses-compatible proxy.
+
+[简体中文](#简体中文) | [繁體中文](#繁體中文) | [English](#english)
+
+[![license](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+![codex](https://img.shields.io/badge/Codex-Responses%20API-blue)
+![docker](https://img.shields.io/badge/docker-compose-2496ED)
+![deployment](https://img.shields.io/badge/deploy-cloud%20%7C%20windows%20%7C%20macOS-orange)
+
+</div>
+
+## 简体中文
 
 这个仓库是一份通用部署方案：在云服务器、Windows 本机或 macOS 本机部署一个兼容层，让 Codex Desktop / Codex CLI 通过 OpenAI Responses API 调用国内主流 OpenAI Chat Completions 兼容模型。
 
@@ -234,7 +245,106 @@ $env:RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 - [安全建议](docs/security.md)
 - [常见问题](docs/troubleshooting.md)
 
-## English Guide
+## 繁體中文
+
+這個倉庫是一份通用部署方案：在雲端伺服器、Windows 本機或 macOS 本機部署一個相容層，讓 Codex Desktop / Codex CLI 透過 OpenAI Responses API 呼叫 OpenAI 相容的 Chat Completions 模型。
+
+目前範例覆蓋的模型/平台：
+
+- 阿里百鍊 / Qwen，例如 `qwen-plus`、`qwen3.6-plus`
+- DeepSeek，例如 `deepseek-chat`、`deepseek-reasoner`
+- MiniMax，例如 `MiniMax-M2.7`、`MiniMax-M2.5`
+- 智譜 GLM，例如 `glm-4.7`、`glm-4.6`、`glm-4.5`
+- MiMo，例如 `mimo-v2-pro`、`mimo-v2.5-pro`
+
+核心架構：
+
+```text
+Codex Desktop / CLI
+  -> go-llm-proxy /v1/responses
+  -> 上游模型平台 /v1/chat/completions 或相容 Chat Completions 端點
+  -> 真實上游模型
+```
+
+Codex 端可以使用 `gpt-5.2` 這類外部別名，代理再把它轉發到真實上游模型，例如 `qwen3.6-plus`、`deepseek-chat`、`MiniMax-M2.7` 或 `glm-4.7`。這個別名只是為了讓 Codex 更容易選擇和呼叫，不代表實際請求的是 OpenAI GPT 模型。
+
+### 快速開始
+
+雲端伺服器：
+
+```bash
+git clone https://github.com/liaoyl830/codex-responses-proxy-guide.git
+cd codex-responses-proxy-guide
+cp config.example.yaml config.yaml
+cp .env.example .env
+docker compose up -d
+```
+
+Windows / macOS 本機：
+
+```bash
+git clone https://github.com/liaoyl830/codex-responses-proxy-guide.git
+cd codex-responses-proxy-guide
+cp config.example.yaml config.yaml
+cp .env.example .env
+docker compose -f docker-compose.local.yml up -d
+```
+
+本機版 Base URL：
+
+```text
+http://127.0.0.1:3002/v1
+```
+
+雲端伺服器版 Base URL：
+
+```text
+http://YOUR_SERVER_IP:3002/v1
+```
+
+生產環境建議使用 HTTPS：
+
+```text
+https://api.example.com/v1
+```
+
+### Codex 設定
+
+```toml
+model_provider = "responses_proxy"
+model = "gpt-5.2"
+web_search = "disabled"
+
+[model_providers.responses_proxy]
+name = "Responses Proxy"
+wire_api = "responses"
+base_url = "BASE_URL"
+env_key = "RESPONSES_PROXY_API_KEY"
+```
+
+PowerShell：
+
+```powershell
+$env:RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+```
+
+macOS / Linux shell：
+
+```bash
+export RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+```
+
+更多文件：
+
+- [Codex 設定](docs/codex-config.md)
+- [Provider Catalog](docs/providers.md)
+- [參數相容性](docs/parameter-compatibility.md)
+- [Windows / macOS 本機部署](docs/local-desktop.md)
+- [官方文件來源](docs/sources.md)
+- [安全建議](docs/security.md)
+- [常見問題](docs/troubleshooting.md)
+
+## English
 
 This repository provides a generic deployment guide for running a compatibility layer on a cloud server, Windows PC, or Mac. It bridges OpenAI-compatible Chat Completions models into Codex Desktop / Codex CLI through a Responses-compatible proxy.
 
