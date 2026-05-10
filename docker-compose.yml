@@ -1,7 +1,7 @@
-services:
-  china-llm-codex-proxy:
+﻿services:
+  codex-responses-proxy:
     image: ghcr.io/yatesdr/go-llm-proxy:latest
-    container_name: china-llm-codex-proxy
+    container_name: codex-responses-proxy
     restart: unless-stopped
     ports:
       - "3002:8080"

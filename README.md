@@ -1,4 +1,4 @@
-# China LLM Codex Proxy Guide
+﻿# Codex Responses Proxy Guide
 
 > 中文说明在前，English guide follows below.
 
@@ -71,8 +71,8 @@ Codex 侧可以把模型名写成 `gpt-5.2` 这样的别名，代理服务器再
 1. 克隆仓库：
 
 ```bash
-git clone https://github.com/liaoyl830/china-llm-codex-proxy-guide.git
-cd china-llm-codex-proxy-guide
+git clone https://github.com/liaoyl830/codex-responses-proxy-guide.git
+cd codex-responses-proxy-guide
 ```
 
 2. 复制配置：
@@ -134,13 +134,13 @@ http://127.0.0.1:3002/v1
 Windows PowerShell：
 
 ```powershell
-$env:CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+$env:RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 macOS / Linux shell：
 
 ```bash
-export CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+export RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 ## 测试代理
@@ -183,27 +183,27 @@ curl BASE_URL/responses \
 ```
 
 ```toml
-model_provider = "china_llm_proxy"
+model_provider = "responses_proxy"
 model = "gpt-5.2"
 web_search = "disabled"
 
-[model_providers.china_llm_proxy]
-name = "China LLM Proxy"
+[model_providers.responses_proxy]
+name = "Responses Proxy"
 wire_api = "responses"
 base_url = "BASE_URL"
-env_key = "CHINA_LLM_PROXY_API_KEY"
+env_key = "RESPONSES_PROXY_API_KEY"
 ```
 
 启动 Codex 前设置代理 Key：
 
 ```bash
-export CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+export RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 Windows PowerShell：
 
 ```powershell
-$env:CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+$env:RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 ## 模型别名
@@ -236,7 +236,7 @@ $env:CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 
 ## English Guide
 
-This repository provides a generic deployment guide for running a compatibility layer on a cloud server, Windows PC, or Mac. It lets Codex Desktop / Codex CLI call mainstream China-hosted OpenAI Chat Completions compatible models through an OpenAI Responses API compatible endpoint.
+This repository provides a generic deployment guide for running a compatibility layer on a cloud server, Windows PC, or Mac. It bridges OpenAI-compatible Chat Completions models into Codex Desktop / Codex CLI through a Responses-compatible proxy.
 
 Covered provider examples:
 
@@ -271,7 +271,7 @@ See [Provider Catalog](docs/providers.md) for details.
 
 ## Use Cases
 
-- You have API keys from one or more China-hosted model providers.
+- You have API keys from one or more OpenAI-compatible model providers.
 - Your upstream model mainly exposes a Chat Completions compatible API.
 - Your Codex provider must use `wire_api = "responses"`.
 - You want upstream API keys to stay in the environment where the proxy runs, while clients only use a proxy key.
@@ -303,8 +303,8 @@ The local desktop mode binds only to `127.0.0.1` by default, so it is not expose
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/liaoyl830/china-llm-codex-proxy-guide.git
-cd china-llm-codex-proxy-guide
+git clone https://github.com/liaoyl830/codex-responses-proxy-guide.git
+cd codex-responses-proxy-guide
 ```
 
 2. Copy the example files:
@@ -366,13 +366,13 @@ http://127.0.0.1:3002/v1
 Windows PowerShell:
 
 ```powershell
-$env:CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+$env:RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 macOS / Linux shell:
 
 ```bash
-export CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+export RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 ## Test the Proxy
@@ -415,27 +415,27 @@ Local desktop: http://127.0.0.1:3002/v1
 ```
 
 ```toml
-model_provider = "china_llm_proxy"
+model_provider = "responses_proxy"
 model = "gpt-5.2"
 web_search = "disabled"
 
-[model_providers.china_llm_proxy]
-name = "China LLM Proxy"
+[model_providers.responses_proxy]
+name = "Responses Proxy"
 wire_api = "responses"
 base_url = "BASE_URL"
-env_key = "CHINA_LLM_PROXY_API_KEY"
+env_key = "RESPONSES_PROXY_API_KEY"
 ```
 
 Set the proxy key before starting Codex:
 
 ```bash
-export CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+export RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 Windows PowerShell:
 
 ```powershell
-$env:CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+$env:RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 ## Model Aliases

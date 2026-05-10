@@ -1,4 +1,4 @@
-# Windows / macOS Local Deployment
+﻿# Windows / macOS Local Deployment
 
 ## 中文
 
@@ -24,8 +24,8 @@ docker compose version
 ### 2. 下载并进入项目
 
 ```powershell
-git clone https://github.com/liaoyl830/china-llm-codex-proxy-guide.git
-cd china-llm-codex-proxy-guide
+git clone https://github.com/liaoyl830/codex-responses-proxy-guide.git
+cd codex-responses-proxy-guide
 ```
 
 如果没有 Git，也可以从 GitHub 下载 ZIP 后解压。
@@ -74,27 +74,27 @@ curl.exe http://127.0.0.1:3002/v1/models -H "Authorization: Bearer YOUR_PROXY_AP
 `config.toml` 示例：
 
 ```toml
-model_provider = "china_llm_proxy"
+model_provider = "responses_proxy"
 model = "gpt-5.2"
 web_search = "disabled"
 
-[model_providers.china_llm_proxy]
-name = "China LLM Proxy"
+[model_providers.responses_proxy]
+name = "Responses Proxy"
 wire_api = "responses"
 base_url = "http://127.0.0.1:3002/v1"
-env_key = "CHINA_LLM_PROXY_API_KEY"
+env_key = "RESPONSES_PROXY_API_KEY"
 ```
 
 PowerShell 临时设置：
 
 ```powershell
-$env:CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+$env:RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 Windows 用户级永久设置：
 
 ```powershell
-setx CHINA_LLM_PROXY_API_KEY "YOUR_PROXY_API_KEY"
+setx RESPONSES_PROXY_API_KEY "YOUR_PROXY_API_KEY"
 ```
 
 使用 `setx` 后需要重启 Codex，必要时也重启终端。
@@ -118,8 +118,8 @@ docker compose version
 ### 2. 下载并进入项目
 
 ```bash
-git clone https://github.com/liaoyl830/china-llm-codex-proxy-guide.git
-cd china-llm-codex-proxy-guide
+git clone https://github.com/liaoyl830/codex-responses-proxy-guide.git
+cd codex-responses-proxy-guide
 ```
 
 如果没有 Git，也可以从 GitHub 下载 ZIP 后解压。
@@ -169,27 +169,27 @@ curl http://127.0.0.1:3002/v1/models \
 `config.toml` 示例：
 
 ```toml
-model_provider = "china_llm_proxy"
+model_provider = "responses_proxy"
 model = "gpt-5.2"
 web_search = "disabled"
 
-[model_providers.china_llm_proxy]
-name = "China LLM Proxy"
+[model_providers.responses_proxy]
+name = "Responses Proxy"
 wire_api = "responses"
 base_url = "http://127.0.0.1:3002/v1"
-env_key = "CHINA_LLM_PROXY_API_KEY"
+env_key = "RESPONSES_PROXY_API_KEY"
 ```
 
 Terminal 临时设置：
 
 ```bash
-export CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+export RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 如果 Codex 是从 Finder 或 Dock 启动，GUI 应用可能拿不到 shell 里的 `export`。可以使用：
 
 ```bash
-launchctl setenv CHINA_LLM_PROXY_API_KEY "YOUR_PROXY_API_KEY"
+launchctl setenv RESPONSES_PROXY_API_KEY "YOUR_PROXY_API_KEY"
 ```
 
 设置后重启 Codex。
@@ -255,8 +255,8 @@ docker compose version
 ### 2. Download and enter the project
 
 ```powershell
-git clone https://github.com/liaoyl830/china-llm-codex-proxy-guide.git
-cd china-llm-codex-proxy-guide
+git clone https://github.com/liaoyl830/codex-responses-proxy-guide.git
+cd codex-responses-proxy-guide
 ```
 
 If Git is not installed, download the ZIP from GitHub and extract it.
@@ -305,27 +305,27 @@ curl.exe http://127.0.0.1:3002/v1/models -H "Authorization: Bearer YOUR_PROXY_AP
 `config.toml` example:
 
 ```toml
-model_provider = "china_llm_proxy"
+model_provider = "responses_proxy"
 model = "gpt-5.2"
 web_search = "disabled"
 
-[model_providers.china_llm_proxy]
-name = "China LLM Proxy"
+[model_providers.responses_proxy]
+name = "Responses Proxy"
 wire_api = "responses"
 base_url = "http://127.0.0.1:3002/v1"
-env_key = "CHINA_LLM_PROXY_API_KEY"
+env_key = "RESPONSES_PROXY_API_KEY"
 ```
 
 Temporary PowerShell variable:
 
 ```powershell
-$env:CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+$env:RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 Persistent user-level variable:
 
 ```powershell
-setx CHINA_LLM_PROXY_API_KEY "YOUR_PROXY_API_KEY"
+setx RESPONSES_PROXY_API_KEY "YOUR_PROXY_API_KEY"
 ```
 
 Restart Codex after using `setx`; restart your terminal if needed.
@@ -349,8 +349,8 @@ docker compose version
 ### 2. Download and enter the project
 
 ```bash
-git clone https://github.com/liaoyl830/china-llm-codex-proxy-guide.git
-cd china-llm-codex-proxy-guide
+git clone https://github.com/liaoyl830/codex-responses-proxy-guide.git
+cd codex-responses-proxy-guide
 ```
 
 If Git is not installed, download the ZIP from GitHub and extract it.
@@ -400,27 +400,27 @@ curl http://127.0.0.1:3002/v1/models \
 `config.toml` example:
 
 ```toml
-model_provider = "china_llm_proxy"
+model_provider = "responses_proxy"
 model = "gpt-5.2"
 web_search = "disabled"
 
-[model_providers.china_llm_proxy]
-name = "China LLM Proxy"
+[model_providers.responses_proxy]
+name = "Responses Proxy"
 wire_api = "responses"
 base_url = "http://127.0.0.1:3002/v1"
-env_key = "CHINA_LLM_PROXY_API_KEY"
+env_key = "RESPONSES_PROXY_API_KEY"
 ```
 
 Temporary shell variable:
 
 ```bash
-export CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+export RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 If Codex is started from Finder or Dock, GUI apps may not inherit shell `export` values. Use:
 
 ```bash
-launchctl setenv CHINA_LLM_PROXY_API_KEY "YOUR_PROXY_API_KEY"
+launchctl setenv RESPONSES_PROXY_API_KEY "YOUR_PROXY_API_KEY"
 ```
 
 Restart Codex after setting it.

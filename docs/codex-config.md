@@ -1,4 +1,4 @@
-# Codex Configuration
+﻿# Codex Configuration
 
 ## 中文
 
@@ -7,7 +7,7 @@ Codex 需要通过 Responses API 调用代理，所以关键字段是：
 ```toml
 wire_api = "responses"
 base_url = "BASE_URL"
-env_key = "CHINA_LLM_PROXY_API_KEY"
+env_key = "RESPONSES_PROXY_API_KEY"
 ```
 
 `BASE_URL` 按部署方式选择：
@@ -20,27 +20,27 @@ Windows / macOS 本机版：http://127.0.0.1:3002/v1
 完整示例：
 
 ```toml
-model_provider = "china_llm_proxy"
+model_provider = "responses_proxy"
 model = "gpt-5.2"
 web_search = "disabled"
 
-[model_providers.china_llm_proxy]
-name = "China LLM Proxy"
+[model_providers.responses_proxy]
+name = "Responses Proxy"
 wire_api = "responses"
 base_url = "BASE_URL"
-env_key = "CHINA_LLM_PROXY_API_KEY"
+env_key = "RESPONSES_PROXY_API_KEY"
 ```
 
 PowerShell 临时设置：
 
 ```powershell
-$env:CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+$env:RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 Linux / macOS 临时设置：
 
 ```bash
-export CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+export RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 如果 Codex 的模型选择界面不显示 `qwen3.6-plus`、`deepseek-chat`、`MiniMax-M2.7` 或 `glm-4.7`，这是正常现象。可以使用代理暴露出来的别名，例如 `gpt-5.2`。代理会把它转发成真实上游模型。
@@ -56,7 +56,7 @@ Codex must call this proxy through the Responses API. The important fields are:
 ```toml
 wire_api = "responses"
 base_url = "BASE_URL"
-env_key = "CHINA_LLM_PROXY_API_KEY"
+env_key = "RESPONSES_PROXY_API_KEY"
 ```
 
 Choose `BASE_URL` by deployment mode:
@@ -69,27 +69,27 @@ Windows / macOS local desktop: http://127.0.0.1:3002/v1
 Full example:
 
 ```toml
-model_provider = "china_llm_proxy"
+model_provider = "responses_proxy"
 model = "gpt-5.2"
 web_search = "disabled"
 
-[model_providers.china_llm_proxy]
-name = "China LLM Proxy"
+[model_providers.responses_proxy]
+name = "Responses Proxy"
 wire_api = "responses"
 base_url = "BASE_URL"
-env_key = "CHINA_LLM_PROXY_API_KEY"
+env_key = "RESPONSES_PROXY_API_KEY"
 ```
 
 Temporary PowerShell environment variable:
 
 ```powershell
-$env:CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+$env:RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 Temporary Linux / macOS environment variable:
 
 ```bash
-export CHINA_LLM_PROXY_API_KEY="YOUR_PROXY_API_KEY"
+export RESPONSES_PROXY_API_KEY="YOUR_PROXY_API_KEY"
 ```
 
 If the Codex model picker does not show `qwen3.6-plus`, `deepseek-chat`, `MiniMax-M2.7`, or `glm-4.7`, that is expected. Use a proxy alias such as `gpt-5.2`; the proxy will rewrite it to the real upstream model.
