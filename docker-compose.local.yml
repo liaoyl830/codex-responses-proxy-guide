@@ -1,0 +1,13 @@
+services:
+  qwen-codex-proxy:
+    image: ghcr.io/yatesdr/go-llm-proxy:latest
+    container_name: qwen-codex-proxy-local
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3002:8080"
+    volumes:
+      - ./config.yaml:/config/config.yaml:ro
+      - proxy-data-local:/data
+
+volumes:
+  proxy-data-local:

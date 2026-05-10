@@ -14,6 +14,9 @@
 | GLM / 智谱 API 概述 | https://docs.bigmodel.cn/cn/api/introduction |
 | GLM / 智谱对话补全 | https://docs.bigmodel.cn/api-reference |
 | MiMo API Provider | https://www.mimo-v2.com/zh/docs/quick-start/first-api-call |
+| Docker Desktop for Windows / WSL 2 | https://docs.docker.com/docker-for-windows/wsl/ |
+| Docker Desktop for Mac | https://docs.docker.com/installation/mac/ |
+| Docker Compose up | https://docs.docker.com/reference/cli/docker/compose/up/ |
 
 ## English
 
@@ -29,3 +32,6 @@ The Base URLs, model-name examples, and compatibility notes in this guide are ba
 | GLM / Zhipu API overview | https://docs.bigmodel.cn/cn/api/introduction |
 | GLM / Zhipu Chat Completions | https://docs.bigmodel.cn/api-reference |
 | MiMo API Provider | https://www.mimo-v2.com/zh/docs/quick-start/first-api-call |
+| Docker Desktop for Windows / WSL 2 | https://docs.docker.com/docker-for-windows/wsl/ |
+| Docker Desktop for Mac | https://docs.docker.com/installation/mac/ |
+| Docker Compose up | https://docs.docker.com/reference/cli/docker/compose/up/ |
