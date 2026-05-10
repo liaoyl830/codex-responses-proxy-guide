@@ -6,8 +6,15 @@ Codex 需要通过 Responses API 调用代理，所以关键字段是：
 
 ```toml
 wire_api = "responses"
-base_url = "http://YOUR_SERVER_IP:3002/v1"
+base_url = "BASE_URL"
 env_key = "CHINA_LLM_PROXY_API_KEY"
+```
+
+`BASE_URL` 按部署方式选择：
+
+```text
+云服务器版：http://YOUR_SERVER_IP:3002/v1 或 https://api.example.com/v1
+Windows / macOS 本机版：http://127.0.0.1:3002/v1
 ```
 
 完整示例：
@@ -21,7 +28,7 @@ web_search = "disabled"
 [model_providers.china_llm_proxy]
 name = "China LLM Proxy"
 wire_api = "responses"
-base_url = "http://YOUR_SERVER_IP:3002/v1"
+base_url = "BASE_URL"
 env_key = "CHINA_LLM_PROXY_API_KEY"
 ```
 
@@ -47,8 +54,15 @@ Codex must call this proxy through the Responses API. The important fields are:
 
 ```toml
 wire_api = "responses"
-base_url = "http://YOUR_SERVER_IP:3002/v1"
+base_url = "BASE_URL"
 env_key = "CHINA_LLM_PROXY_API_KEY"
+```
+
+Choose `BASE_URL` by deployment mode:
+
+```text
+Cloud server: http://YOUR_SERVER_IP:3002/v1 or https://api.example.com/v1
+Windows / macOS local desktop: http://127.0.0.1:3002/v1
 ```
 
 Full example:
@@ -62,7 +76,7 @@ web_search = "disabled"
 [model_providers.china_llm_proxy]
 name = "China LLM Proxy"
 wire_api = "responses"
-base_url = "http://YOUR_SERVER_IP:3002/v1"
+base_url = "BASE_URL"
 env_key = "CHINA_LLM_PROXY_API_KEY"
 ```
 

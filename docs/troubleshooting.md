@@ -24,7 +24,7 @@ keys:
 - 上游 Base URL 写错。
 - 上游 Key 无效或已过期。
 - 上游套餐不支持该模型。
-- 服务器无法访问上游网络。
+- 代理所在环境无法访问上游网络。本机版检查电脑网络，云服务器版检查服务器网络。
 
 ### 429 Too Many Requests
 
@@ -71,7 +71,7 @@ Common causes:
 - Wrong upstream Base URL.
 - Invalid or expired upstream key.
 - The upstream plan does not include the requested model.
-- The server cannot reach the upstream network.
+- The proxy runtime cannot reach the upstream network. For local mode, check your computer network; for cloud mode, check the server network.
 
 ### 429 Too Many Requests
 
